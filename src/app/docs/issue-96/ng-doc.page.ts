@@ -1,6 +1,6 @@
 import {NgDocPage} from '@ng-doc/core';
 import {ExampleFormInputComponent} from "./example-form-input.component";
-import {TextComponent} from "../../text/text.component";
+import {TextComponent} from "./text/text.component";
 import {FormControl} from "@angular/forms";
 
 const Issue96Page: NgDocPage = {

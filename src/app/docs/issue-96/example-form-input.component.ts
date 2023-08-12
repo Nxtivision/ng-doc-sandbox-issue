@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {TextComponent} from "../../text/text.component";
+import {TextComponent} from "./text/text.component";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
