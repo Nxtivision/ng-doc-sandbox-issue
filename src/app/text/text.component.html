@@ -1,0 +1,19 @@
+<mat-form-field *ngIf="!readonly" [class.mat-dense]="dense">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    type="text"
+    [placeholder]="placeholder"
+    [required]="required"
+    [maxlength]="maxLength"
+    [minlength]="minLength"
+    [formControl]="control | asFormControl"
+    [errorStateMatcher]="errorStateMatcher || defaultErrorStateMatcher" />
+  <span matSuffix>
+    <ng-content select="[suffix]"></ng-content>
+  </span>
+  <span matPrefix>
+    <ng-content select="[prefix]"></ng-content>
+  </span>
+  <mat-hint>{{ description }}</mat-hint>
+</mat-form-field>
