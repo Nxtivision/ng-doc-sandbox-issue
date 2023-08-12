@@ -87,7 +87,8 @@
               "browserTarget": "ng-doc-sandbox:build:production"
             },
             "development": {
-              "browserTarget": "ng-doc-sandbox:build:development"
+              "browserTarget": "ng-doc-sandbox:build:development",
+              "allowedHosts": ["localhost", ".gitpod.io"]
             }
           },
           "defaultConfiguration": "development"
@@ -118,5 +119,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
