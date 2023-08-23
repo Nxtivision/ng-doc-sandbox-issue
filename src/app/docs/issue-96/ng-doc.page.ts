@@ -1,7 +1,7 @@
 import {NgDocPage} from '@ng-doc/core';
 import {ExampleFormInputComponent} from "./example-form-input.component";
 import {TextComponent} from "./text/text.component";
-import {FormControl} from "@angular/forms";
+import {FormControl, ReactiveFormsModule} from "@angular/forms";
 
 const Issue96Page: NgDocPage = {
 	title: `issue-96`,
@@ -9,15 +9,18 @@ const Issue96Page: NgDocPage = {
   demos: {
     ExampleFormInputComponent
   },
+  imports: [ReactiveFormsModule],
   playgrounds: {
     FormInputPlayground: {
       target: TextComponent,
-      template: `<ng-doc-selector></ng-doc-selector>`,
+      template: `<ng-doc-selector [formControl]="data.formControl"></ng-doc-selector>`,
       defaults: {
-        formControl: new FormControl(''),
         label: 'Texte',
         placeholder: 'Enter some text',
         description: 'Explain anything you want',
+      },
+      data: {
+        formControl: new FormControl(''),
       }
     }
   }
